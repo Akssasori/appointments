@@ -1,0 +1,34 @@
+npm init -y
+npm i express
+# instalando como dependecia de desenvolvimento
+npm add typescript ts-node nodemon -D
+criando pasta SRC depois arquivo sercer.ts
+# inicializando o typescript
+npx tsc --init
+# criar arquivo de configuração do nodemon
+crie o arquivo nodemon.json
+# criando script do projeto 
+"dev": "nodemon src/serve.ts",
+
+## OBS
+enfrentei problemas porque a versão do express qeu foi instalada era a 5 que aidna esta em beta e tem algumas tipagens ainda não usadas, para resolver instale a versão 4
+npm uninstall express
+npm install express@4
+npm install --save-dev @types/express@4
+
+
+# Agendamento de consulta médica
+
+### **Funcionalidades**
+
+---
+### **Cadastro de Usuário**
+
+- [ ] Deve ser possível o usuário realizar um cadastro
+ - [ ] O usuário não precisa estar autenticado no sistema para se cadastrar
+ - [ ] Não deve ser possível realizar o cadastro de um usuário sem username e senha
+ - [ ] Não deve ser possível realizar o cadastro de  username já existente
+ - [ ] Não deve ser possivel o usuário cadastar a permissão de administrador.
+
+---
+ 
