@@ -24,11 +24,11 @@ npm install --save-dev @types/express@4
 ---
 ### **Cadastro de Usuário**
 
-- [ ] Deve ser possível o usuário realizar um cadastro
- - [ ] O usuário não precisa estar autenticado no sistema para se cadastrar
- - [ ] Não deve ser possível realizar o cadastro de um usuário sem username e senha
- - [ ] Não deve ser possível realizar o cadastro de  username já existente
- - [ ] Não deve ser possivel o usuário cadastar a permissão de administrador.
+- [x] Deve ser possível o usuário realizar um cadastro
+  - [x] O usuário não precisa estar autenticado no sistema para se cadastrar
+  - [x] Não deve ser possível realizar o cadastro de um usuário sem username e senha
+  - [x] Não deve ser possível realizar o cadastro de  username já existente
+  - [x] Não deve ser possivel o usuário cadastar a permissão de administrador.
 
 ---
  
