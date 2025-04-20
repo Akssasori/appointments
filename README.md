@@ -12,7 +12,13 @@ npm i @types/winston -D
 crie o arquivo nodemon.json
 # criando script do projeto 
 "dev": "nodemon src/serve.ts",
-
+# ORM prisma
+npm i prisma -D
+npx prisma init
+# Ao se criar um modelo no prisma vai ser necessário se defender do gai
+npx prisma migrate dev
+# para acessar o process.env precisamos instalar a lib dotenv
+npm i dotenv
 ## OBS
 enfrentei problemas porque a versão do express que foi instalada era a 5 que aidna esta em beta e tem algumas tipagens ainda não usadas, para resolver instale a versão 4
 npm uninstall express
