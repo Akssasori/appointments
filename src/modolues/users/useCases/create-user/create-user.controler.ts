@@ -1,8 +1,11 @@
 import { Request, Response } from 'express';
 import {CreateUserUseCase} from "./create-user.usecase";
-import {logger} from "../../utils/logger";
+import {logger} from "../../../../utils/logger";
+import {IUserRepository} from "../../repositories/user.repository";
 
 export class CreateUserController {
+
+    constructor(private userRepository: IUserRepository) {}
 
     async handle(request: Request, response: Response) {
         logger.info('Create user Controller');
@@ -10,7 +13,7 @@ export class CreateUserController {
 
             const data = request.body;
 
-            const useCase = new CreateUserUseCase();
+            const useCase = new CreateUserUseCase(this.userRepository);
             const result = await useCase.execute(data);
 
             return response.status(200).json(result);
