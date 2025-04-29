@@ -9,11 +9,9 @@ type UserRequest = {
 }
 
 export class CreateUserUseCase {
-
     constructor(private userRepository: IUserRepository){}
 
     async execute(data: UserRequest) {
-
         const user = User.create(data);
 
         if (!data.username || !data.password) {

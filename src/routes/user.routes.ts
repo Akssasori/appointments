@@ -3,7 +3,9 @@ import {createUserController} from "../modolues/users/useCases/create-user";
 
 const userRouter = Router();
 
-userRouter.post('/users', createUserController.handle);
+userRouter.post('/users', async (request, response) => {
+    await createUserController.handle(request,response);
+});
 
 export { userRouter };
 
