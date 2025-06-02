@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   postgres:
     image: postgres
@@ -8,4 +9,11 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: coti
+      POSTGRES_DB: medical_appointment  # 👈 Aqui define o nome do banco
+    volumes:
+      - medical_data:/var/lib/postgresql/data
     restart: always
+
+volumes:
+  medical_data:
+    name: medical_data

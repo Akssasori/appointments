@@ -17,9 +17,11 @@ export class CreateUserController {
             const result = await useCase.execute(data);
 
             return response.status(200).json(result);
-        } catch (error: any) {
-            logger.error(error.stack);
-            return response.status(error.statusCode).json(error.message);
+        } catch (err: any) {
+            logger.error(err.stack);
+            return response.status(err.statusCode).json({
+                error: err.message,
+            });
         }
     }
 }

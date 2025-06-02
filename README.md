@@ -25,6 +25,8 @@ npm uninstall express
 npm install express@4
 npm install --save-dev @types/express@4
 
+docker-compose -p medical_appointment up
+
 
 # Agendamento de consulta médica
 
